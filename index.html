@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KSSB | Wa Keur Serigne Saliou Bâtiment</title>
+
+<meta name="description" content="KSSB - Wa Keur Serigne Saliou Bâtiment. Construction, immobilier, location, plans 2D/3D, ferraillage, terrassement et matériel de construction.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --blue:#0756b8;
+    --blue-dark:#063b7c;
+    --blue-light:#eaf3ff;
+    --white:#ffffff;
+    --dark:#0b1b2b;
+    --gray:#64748b;
+    --light:#f5f9ff;
+    --border:#dce8f5;
+    --shadow:0 15px 45px rgba(4,53,105,.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',Arial,sans-serif;
+    color:var(--dark);
+    background:white;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    box-shadow:0 2px 20px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.navbar{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
+
+.logo-text strong{
+    display:block;
+    color:var(--blue);
+    font-size:20px;
+    font-weight:800;
+}
+
+.logo-text span{
+    display:block;
+    font-size:10px;
+    color:var(--gray);
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+.nav-btn{
+    background:var(--blue);
+    color:white!important;
+    padding:12px 18px;
+    border-radius:7px;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:var(--blue);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:760px;
+    margin-top:82px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    color:white;
+    background:
+    linear-gradient(90deg,rgba(2,28,60,.94),rgba(4,67,137,.72),rgba(3,61,120,.35)),
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:30px;
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(5px);
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.08;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#8dc5ff;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:650px;
+    color:#e8f2ff;
+    margin-bottom:30px;
+}
+
+.slogan{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 23px;
+    border-radius:7px;
+    font-weight:700;
+    font-size:13px;
+    transition:.3s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:white;
+    color:var(--blue);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-blue{
+    background:var(--blue);
+    color:white;
+}
+
+.btn-blue:hover{
+    background:var(--blue-dark);
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+    background:transparent;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--blue);
+}
+
+.hero-contact{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:35px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:95px 0;
+}
+
+.section-header{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 55px;
+}
+
+.section-header .small-title{
+    color:var(--blue);
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.section-header h2{
+    font-size:38px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.section-header p{
+    color:var(--gray);
+    font-size:15px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:var(--light);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:var(--shadow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:350px;
+}
+
+.about-image img{
+    width:80%;
+    max-width:350px;
+    object-fit:contain;
+}
+
+.about-content h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:var(--gray);
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+.info-box{
+    margin-top:25px;
+    padding:20px;
+    background:white;
+    border-left:4px solid var(--blue);
+    border-radius:8px;
+    box-shadow:var(--shadow);
+}
+
+.info-box strong{
+    color:var(--blue);
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:30px;
+    background:white;
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+    border-color:#a8c9ef;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:var(--blue-light);
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* ================= REALISATIONS ================= */
+
+.realizations{
+    background:var(--light);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.project{
+    height:320px;
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:var(--shadow);
+}
+
+.project img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.project:hover img{
+    transform:scale(1.08);
+}
+
+.project-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px;
+    color:white;
+    background:linear-gradient(transparent,rgba(0,0,0,.85));
+}
+
+.project-overlay h3{
+    font-size:18px;
+}
+
+.project-overlay p{
+    font-size:12px;
+    opacity:.9;
+}
+
+/* ================= MODELES ================= */
+
+.models-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.model{
+    border-radius:14px;
+    overflow:hidden;
+    background:white;
+    border:1px solid var(--border);
+    transition:.3s;
+}
+
+.model:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.model img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.model-info{
+    padding:22px;
+}
+
+.model-info h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.model-info p{
+    color:var(--gray);
+    font-size:12px;
+}
+
+/* ================= PLANS ================= */
+
+.plans{
+    background:var(--blue);
+    color:white;
+}
+
+.plans .section-header p{
+    color:#d8eaff;
+}
+
+.plans .small-title{
+    color:#a9d0ff;
+}
+
+.plans-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.plan-card{
+    background:white;
+    color:var(--dark);
+    padding:30px;
+    border-radius:14px;
+}
+
+.plan-card .icon{
+    margin-bottom:18px;
+}
+
+.plan-card h3{
+    margin-bottom:10px;
+}
+
+.plan-card p{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* ================= ENGAGEMENTS ================= */
+
+.engagements{
+    background:var(--light);
+}
+
+.engagement-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.engagement{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.engagement .number{
+    font-size:40px;
+    font-weight:800;
+    color:var(--blue);
+    margin-bottom:10px;
+}
+
+.engagement h3{
+    margin-bottom:8px;
+}
+
+.engagement p{
+    color:var(--gray);
+    font-size:13px;
+}
+
+/* ================= DEVIS ================= */
+
+.quote{
+    background:white;
+}
+
+.quote-wrapper{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:40px;
+    background:var(--light);
+    border-radius:20px;
+    padding:45px;
+}
+
+.quote-info h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.quote-info p{
+    color:var(--gray);
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.contact-mini{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.contact-mini a{
+    color:var(--blue);
+    font-weight:700;
+    font-size:14px;
+}
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+input,select,textarea{
+    width:100%;
+    border:1px solid var(--border);
+    border-radius:7px;
+    padding:13px;
+    font-family:inherit;
+    outline:none;
+    font-size:13px;
+}
+
+input:focus,select:focus,textarea:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(7,86,184,.08);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:var(--light);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.contact-card .icon{
+    margin:0 auto 15px;
+}
+
+.contact-card h3{
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.contact-card p,
+.contact-card a{
+    color:var(--gray);
+    font-size:12px;
+}
+
+.contact-card a:hover{
+    color:var(--blue);
+}
+
+/* ================= SOCIAL ================= */
+
+.social{
+    text-align:center;
+    padding:50px 0;
+}
+
+.social h3{
+    margin-bottom:20px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-link{
+    padding:12px 20px;
+    border:1px solid var(--border);
+    border-radius:7px;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.social-link:hover{
+    background:var(--blue);
+    color:white;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#061a31;
+    color:white;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:40px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.footer-logo img{
+    width:60px;
+    background:white;
+    border-radius:7px;
+    padding:3px;
+}
+
+.footer h3{
+    margin-bottom:15px;
+    font-size:15px;
+}
+
+.footer p,
+.footer a{
+    color:#b8c8da;
+    font-size:12px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;
+    text-align:center;
+    color:#8ca1b8;
+    font-size:11px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:82px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        display:none;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        border-bottom:1px solid #edf2f7;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:16px 5%;
+    }
+
+    .nav-btn{
+        border-radius:0;
+        text-align:center;
+    }
+
+    .hero{
+        min-height:700px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .about-grid,
+    .quote-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid,
+    .projects,
+    .models-grid,
+    .plans-grid,
+    .engagement-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    .logo-text strong{
+        font-size:16px;
+    }
+
+    .logo-text span{
+        font-size:8px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-contact{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .section-header h2{
+        font-size:29px;
+    }
+
+    .services-grid,
+    .projects,
+    .models-grid,
+    .plans-grid,
+    .engagement-grid,
+    .contact-grid,
+    .form-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quote-wrapper{
+        padding:25px;
+    }
+
+    .project{
+        height:280px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#accueil" class="logo">
+
+<img src="images/logo-kssb.png" alt="Logo KSSB">
+
+<div class="logo-text">
+<strong>KSSB</strong>
+<span>WA KEUR SERIGNE SALIOU BÂTIMENT</span>
+</div>
+
+</a>
+
+<div class="menu-btn" id="menuBtn">☰</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#accueil">Accueil</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#realisations">Réalisations</a></li>
+<li><a href="#plans">Études & Plans</a></li>
+<li><a href="#apropos">À propos</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#devis" class="nav-btn">Demander un devis</a></li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="accueil">
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<div class="badge">
+AGENCE IMMOBILIÈRE • CONSTRUCTION • SERVICES
+</div>
+
+<h1>
+Construisons<br>
+<span>vos projets ensemble.</span>
+</h1>
+
+<p>
+KSSB — Wa Keur Serigne Saliou Bâtiment vous accompagne
+dans vos projets de construction, immobilier, location,
+plans techniques et aménagement.
+</p>
+
+<div class="slogan">
+« Notre projet, notre priorité »
+</div>
+
+<div class="hero-buttons">
+
+<a href="#devis" class="btn btn-primary">
+Demander un devis
+</a>
+
+<a href="https://wa.me/221710539943" target="_blank" class="btn btn-outline">
+WhatsApp
+</a>
+
+</div>
+
+<div class="hero-contact">
+
+<a href="tel:+221710539943">📞 71 053 99 43</a>
+<a href="tel:+221779640145">📞 77 964 01 45</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= A PROPOS ================= -->
+
+<section class="about" id="apropos">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image reveal">
+
+<img src="images/logo-kssb.png" alt="KSSB">
+
+</div>
+
+<div class="about-content reveal">
+
+<div class="section-header" style="text-align:left;margin:0 0 25px">
+
+<div class="small-title">
+À PROPOS DE KSSB
+</div>
+
+<h2>
+Votre partenaire pour vos projets.
+</h2>
+
+</div>
+
+<p>
+<strong>KSSB — Wa Keur Serigne Saliou Bâtiment</strong>
+est une structure spécialisée dans la construction,
+l'immobilier et différents services liés au bâtiment.
+</p>
+
+<p>
+Notre objectif est de proposer des solutions adaptées
+aux besoins de nos clients, de la conception du projet
+jusqu'à sa réalisation.
+</p>
+
+<p>
+Nous mettons l'accent sur le sérieux, la qualité,
+l'accompagnement et le respect des besoins de chaque client.
+</p>
+
+<div class="info-box">
+<strong>Notre slogan :</strong><br>
+« Notre projet, notre priorité »
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="small-title">NOS SERVICES</div>
+
+<h2>
+Des solutions complètes pour vos projets
+</h2>
+
+<p>
+Découvrez les principaux services proposés par KSSB.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card reveal">
+<div class="icon">🏗️</div>
+<h3>Construction de bâtiments</h3>
+<p>
+Du plan à la livraison, nous vous accompagnons
+dans la réalisation de vos projets de construction.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">🏠</div>
+<h3>Immobilier</h3>
+<p>
+Solutions immobilières adaptées à vos besoins
+pour vos projets résidentiels et professionnels.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">🔑</div>
+<h3>Location & gérance</h3>
+<p>
+Location et gestion de maisons et appartements
+selon vos besoins.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">🚗</div>
+<h3>Location de voiture</h3>
+<p>
+Des véhicules pour accompagner vos déplacements
+personnels ou professionnels.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">🧱</div>
+<h3>Matériel de construction</h3>
+<p>
+Vente de matériel de construction avec des produits
+adaptés aux différents besoins du chantier.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">📐</div>
+<h3>Plans 2D, 3D & ferraillage</h3>
+<p>
+Conception de plans et études techniques pour
+des projets bien conçus.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">🚜</div>
+<h3>Terrassement</h3>
+<p>
+Préparation du terrain et travaux nécessaires
+pour des fondations solides.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">🏢</div>
+<h3>Bâtiments professionnels</h3>
+<p>
+Accompagnement pour la réalisation de bureaux,
+commerces et autres bâtiments professionnels.
+</p>
+</div>
+
+<div class="service-card reveal">
+<div class="icon">📋</div>
+<h3>Accompagnement de projet</h3>
+<p>
+Un accompagnement personnalisé à chaque étape
+de votre projet.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= REALISATIONS ================= -->
+
+<section class="realizations" id="realisations">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="small-title">NOS RÉALISATIONS</div>
+
+<h2>
+Des projets pensés pour durer
+</h2>
+
+<p>
+Quelques visuels de présentation illustrant différents
+types de projets architecturaux et de construction.
+</p>
+
+</div>
+
+<div class="projects">
+
+<div class="project reveal">
+
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Projet résidentiel">
+
+<div class="project-overlay">
+<h3>Projet résidentiel</h3>
+<p>Maison moderne et fonctionnelle</p>
+</div>
+
+</div>
+
+<div class="project reveal">
+
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85" alt="Bâtiment professionnel">
+
+<div class="project-overlay">
+<h3>Bâtiment professionnel</h3>
+<p>Architecture moderne</p>
+</div>
+
+</div>
+
+<div class="project reveal">
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Projet immobilier">
+
+<div class="project-overlay">
+<h3>Projet immobilier</h3>
+<p>Espaces modernes et confortables</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MODELES ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="small-title">MODÈLES DE BÂTIMENTS</div>
+
+<h2>
+Des inspirations pour vos futurs projets
+</h2>
+
+<p>
+Choisissez une inspiration et discutons ensemble
+de votre projet.
+</p>
+
+</div>
+
+<div class="models-grid">
+
+<div class="model reveal">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85">
+
+<div class="model-info">
+<h3>Maison moderne</h3>
+<p>Design contemporain et espaces optimisés.</p>
+</div>
+
+</div>
+
+<div class="model reveal">
+
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85">
+
+<div class="model-info">
+<h3>Maison familiale</h3>
+<p>Confort et fonctionnalité pour toute la famille.</p>
+</div>
+
+</div>
+
+<div class="model reveal">
+
+<img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=85">
+
+<div class="model-info">
+<h3>Villa</h3>
+<p>Une conception élégante adaptée à vos besoins.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PLANS ================= -->
+
+<section class="plans" id="plans">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="small-title">ÉTUDES & PLANS</div>
+
+<h2>
+Concevoir avant de construire
+</h2>
+
+<p>
+Une bonne conception permet de mieux maîtriser
+son projet avant le début des travaux.
+</p>
+
+</div>
+
+<div class="plans-grid">
+
+<div class="plan-card reveal">
+
+<div class="icon">📐</div>
+
+<h3>Plan 2D</h3>
+
+<p>
+Organisation des espaces et représentation
+technique du projet.
+</p>
+
+</div>
+
+<div class="plan-card reveal">
+
+<div class="icon">🏢</div>
+
+<h3>Plan 3D</h3>
+
+<p>
+Visualisation plus réaliste de votre futur bâtiment.
+</p>
+
+</div>
+
+<div class="plan-card reveal">
+
+<div class="icon">🔩</div>
+
+<h3>Ferraillage</h3>
+
+<p>
+Étude et représentation des éléments de ferraillage
+pour votre projet.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ENGAGEMENTS ================= -->
+
+<section class="engagements">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="small-title">NOS ENGAGEMENTS</div>
+
+<h2>
+Pourquoi choisir KSSB ?
+</h2>
+
+</div>
+
+<div class="engagement-grid">
+
+<div class="engagement reveal">
+
+<div class="number">01</div>
+
+<h3>Sérieux & professionnalisme</h3>
+
+<p>
+Nous accordons une importance particulière
+à la qualité et au sérieux dans nos prestations.
+</p>
+
+</div>
+
+<div class="engagement reveal">
+
+<div class="number">02</div>
+
+<h3>Accompagnement personnalisé</h3>
+
+<p>
+Chaque projet est différent. Nous adaptons
+notre accompagnement à vos besoins.
+</p>
+
+</div>
+
+<div class="engagement reveal">
+
+<div class="number">03</div>
+
+<h3>Solutions durables</h3>
+
+<p>
+Notre objectif est de contribuer à des projets
+solides, fonctionnels et durables.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DEVIS ================= -->
+
+<section class="quote" id="devis">
+
+<div class="container">
+
+<div class="quote-wrapper">
+
+<div class="quote-info reveal">
+
+<div class="section-header" style="text-align:left;margin:0 0 25px">
+
+<div class="small-title">
+VOTRE PROJET
+</div>
+
+<h2>
+Parlons de votre projet.
+</h2>
+
+</div>
+
+<p>
+Vous avez un projet de construction, immobilier,
+location, plan ou terrassement ?
+Envoyez-nous votre demande directement sur WhatsApp.
+</p>
+
+<div class="contact-mini">
+
+<a href="tel:+221710539943">
+📞 71 053 99 43
+</a>
+
+<a href="tel:+221779640145">
+📞 77 964 01 45
+</a>
+
+<a href="mailto:kssbatiment@gmail.com">
+✉️ kssbatiment@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<form id="quoteForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Nom complet</label>
+
+<input type="text" id="nom" placeholder="Votre nom" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Téléphone</label>
+
+<input type="tel" id="telephone" placeholder="Votre numéro" required>
+
+</div>
+
+<div class="form-group full">
+
+<label>Type de projet</label>
+
+<select id="projet" required>
+
+<option value="">Sélectionnez votre projet</option>
+
+<option>Construction de bâtiment</option>
+<option>Immobilier</option>
+<option>Location maison / appartement</option>
+<option>Location de voiture</option>
+<option>Matériel de construction</option>
+<option>Plan 2D / 3D</option>
+<option>Ferraillage</option>
+<option>Terrassement</option>
+<option>Autre</option>
+
+</select>
+
+</div>
+
+<div class="form-group full">
+
+<label>Description du projet</label>
+
+<textarea id="message" placeholder="Décrivez brièvement votre projet..." required></textarea>
+
+</div>
+
+</div>
+
+<button class="btn btn-blue" type="submit">
+📲 Envoyer la demande sur WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="small-title">CONTACT</div>
+
+<h2>
+Restons en contact
+</h2>
+
+<p>
+Notre équipe est disponible pour échanger sur votre projet.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card reveal">
+
+<div class="icon">📞</div>
+
+<h3>Téléphone</h3>
+
+<a href="tel:+221710539943">71 053 99 43</a><br>
+<a href="tel:+221779640145">77 964 01 45</a>
+
+</div>
+
+<div class="contact-card reveal">
+
+<div class="icon">✉️</div>
+
+<h3>Email</h3>
+
+<a href="mailto:kssbatiment@gmail.com">
+kssbatiment@gmail.com
+</a>
+
+</div>
+
+<div class="contact-card reveal">
+
+<div class="icon">📍</div>
+
+<h3>Adresse</h3>
+
+<p>
+Yeumbeul Route de Boune,<br>
+Heur Massar,<br>
+Niacoulrab Darou Thioub
+</p>
+
+</div>
+
+<div class="contact-card reveal">
+
+<div class="icon">💬</div>
+
+<h3>WhatsApp</h3>
+
+<a href="https://wa.me/221710539943" target="_blank">
+Nous écrire
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= RÉSEAUX ================= -->
+
+<section class="social">
+
+<div class="container">
+
+<h3>Retrouvez KSSB sur les réseaux sociaux</h3>
+
+<div class="social-links">
+
+<a href="#" class="social-link">
+Facebook
+</a>
+
+<a href="#" class="social-link">
+Instagram
+</a>
+
+<a href="#" class="social-link">
+TikTok
+</a>
+
+<a href="https://wa.me/221710539943" target="_blank" class="social-link">
+WhatsApp
+</a>
+
+</div>
+
+<p style="margin-top:18px;color:#64748b;font-size:12px;">
+WAKEUR SERIGNE SALIOU BATIMENT
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+<img src="images/logo-kssb.png" alt="KSSB">
+
+<div>
+<strong>KSSB</strong><br>
+<small>Wa Keur Serigne Saliou Bâtiment</small>
+</div>
+
+</div>
+
+<p>
+« Notre projet, notre priorité »
+</p>
+
+<p style="margin-top:12px;">
+Construction • Immobilier • Location • Plans • Terrassement
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Navigation</h3>
+
+<div class="footer-links">
+
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#realisations">Réalisations</a>
+<a href="#plans">Études & Plans</a>
+<a href="#apropos">À propos</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<div class="footer-links">
+
+<a href="tel:+221710539943">71 053 99 43</a>
+
+<a href="tel:+221779640145">77 964 01 45</a>
+
+<a href="mailto:kssbatiment@gmail.com">
+kssbatiment@gmail.com
+</a>
+
+<a href="https://wa.me/221710539943" target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 KSSB — Wa Keur Serigne Saliou Bâtiment.
+Tous droits réservés.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP FLOTTANT ================= -->
+
+<a
+href="https://wa.me/221710539943"
+target="_blank"
+class="whatsapp"
+aria-label="Contacter KSSB sur WhatsApp"
+>
+☏
+</a>
+
+
+<script>
+
+/* MENU MOBILE */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+
+});
+
+
+/* ANIMATIONS */
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+    reveals.forEach(element => {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 80){
+            element.classList.add("active");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+
+/* FORMULAIRE WHATSAPP */
+
+document.getElementById("quoteForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nom = document.getElementById("nom").value;
+    const telephone = document.getElementById("telephone").value;
+    const projet = document.getElementById("projet").value;
+    const message = document.getElementById("message").value;
+
+    const texte =
+`Bonjour KSSB - Wa Keur Serigne Saliou Bâtiment 👋🏽
+
+Je souhaite demander un devis.
+
+👤 Nom : ${nom}
+📞 Téléphone : ${telephone}
+🏗️ Projet : ${projet}
+
+📝 Description :
+${message}
+
+Merci.`;
+
+    const whatsappURL =
+    "https://wa.me/221710539943?text=" +
+    encodeURIComponent(texte);
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
